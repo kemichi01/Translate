@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <input id="english" type="text">
+        </td>
+        <td>
+            <input type="button" value="dịch" onclick="translater()">
+        </td>
+    </tr>
+    <p id="dich"></p>
+</table>
+
+<script>
+    function translater() {
+        let enlan = new Array('love','hate','miss','wait');
+        let vielan = new Array('Yêu','ghét','nhớ','chờđợi');
+        let input=document.getElementById('english').value;
+        for(let i=0;i<enlan.length;i++)
+        {
+            if(input==enlan[i])
+            {
+                document.getElementById('dich').innerHTML=vielan[i];
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
